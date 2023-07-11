@@ -1,0 +1,367 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif !important;
+    color: #333;
+}
+
+button {
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+html .hide-scrollbar,
+body .hide-scrollbar {
+    overflow: hidden;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+img.sharp-rendered {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.wrapword {
+    white-space: -moz-pre-wrap !important;
+    white-space: -webkit-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+#banner {
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-color: lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+#banner .main-text {
+    width: calc(100% - 40px);
+    padding: 20px;
+    text-align: right;
+    color: #eee;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#banner .main-text.on {
+    width: calc(100% - 80px);
+    text-align: center;
+    padding: 13px 0px 6px 10px;
+    background-color: transparent;
+}
+
+#banner .main-text.on h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#banner .main-text.on h1,
+#banner .main-text.on h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#banner .main-text h1 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+#banner .main-text h2 {
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 0;
+}
+
+#banner .main-text h2 span {
+    margin-right: 10px;
+}
+
+#banner .main-text h3 {
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#banner .main-text h3 span {
+    margin: 0 10px;
+}
+
+#about {
+    width: calc(50% - 100px);
+    padding: 120px 50px 50px 50px;
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    left: 50%;
+    position: relative;
+}
+
+#about .about-context {
+    width: 100%;
+    float: left;
+}
+
+#about .about-context h1 {
+    margin-top: 0;
+}
+
+#about .about-context .about-text {
+    width: 100%;
+}
+
+#about .detail-context {
+    width: 100%;
+    float: left;
+}
+
+#about .detail-context .detail-text {
+    width: 100%;
+}
+
+#about .detail-context .detail-text ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+#about .detail-context .detail-text ul li {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+#about .detail-context .detail-text ul li img {
+    width: auto;
+    height: 15px;
+    margin-right: 10px;
+}
+
+#gallery {
+    width: calc(50% - 100px);
+    padding: 50px;
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    left: 50%;
+    position: relative;
+}
+
+#gallery h1 {
+    margin-top: 0;
+}
+
+#gallery .gallery-context figure {
+    float: none;
+    display: inline-block;
+    object-fit: fill;
+    margin: 0 15px 15px 0;
+    width: 160px;
+    height: 160px;
+}
+
+#gallery .gallery-context figure a {
+    width: 100%;
+    height: 100%;
+}
+
+#gallery .gallery-context figure a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contact {
+    width: calc(50% - 100px);
+    padding: 50px;
+    display: inline-block;
+    left: 50%;
+    position: relative;
+}
+
+#contact h1 {
+    margin-top: 0;
+}
+
+#contact .contact-context {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+#contact .contact-context .agent-context {
+    width: calc(100% - 40px);
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 15px #ddd;
+}
+
+#contact .contact-context .agent-context .agent-images {
+    height: 100px;
+    display: block;
+    position: relative;
+}
+
+#contact .contact-context .agent-context .agent-images .agent-photo {
+    float: left;
+    height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+}
+
+#contact .contact-context .agent-context .agent-images .agent-logo {
+    float: right;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+#contact .contact-context .agent-context h1 {
+    display: block;
+    margin: 0 0 0 6px;
+}
+
+#contact .contact-context .agent-context p {
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+#contact .contact-context .agent-context p i {
+    width: 30px;
+    text-align: center;
+}
+
+#contact .contact-context .agent-context p a {
+    color: #333;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 959px) {
+    #banner {
+        width: 100%;
+        position: relative;
+    }
+    #banner .main-text.on {
+        display: none;
+    }
+    #banner .main-text h1 {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+    }
+    #banner .screensize-button {
+        display: none;
+    }
+    /* #header {
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 11;
+    } */
+    #about {
+        left: 0;
+        width: calc(100% - 40px);
+        padding: 50px 20px;
+    }
+    #about .about-context {
+        width: 100%;
+    }
+    #about .detail-context {
+        width: 100%;
+    }
+    #about .detail-context .detail-text ul {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    #gallery {
+        left: 0;
+        width: calc(100% - 40px);
+        padding: 50px 20px;
+    }
+    #gallery .gallery-context {
+        text-align: center;
+    }
+    #gallery .gallery-context figure {
+        width: calc(50% - 20px);
+    }
+    #contact {
+        left: 0;
+        width: calc(100% - 40px);
+        padding: 50px 20px;
+    }
+    #contact .contact-context {
+        width: 100%;
+    }
+    #contact .contact-context .agent-context {
+        width: calc(100% - 40px);
+        float: none;
+    }
+    #contact .contact-context .agent-context .agent-images {
+        height: 70px;
+        display: block;
+    }
+    #contact .contact-context .agent-context .agent-images .agent-photo {
+        float: left;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+    }
+    #contact .contact-context .agent-context .agent-images .agent-logo {
+        float: right;
+        height: 100%;
+        opacity: 0.5;
+    }
+    #contact .contact-context .agent-context p a {
+        color: #333;
+    }
+}

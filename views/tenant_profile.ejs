@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Tenant_profile.css">
+    <title>Tenant Profile</title>
+</head>
+<body>
+  <form action="/loginT" autocomplete="off"class="sign-in-form" method="POST"></form>
+    <div class="main-content">
+      <!-- Page content -->
+      <div class="container-fluid mt--7">
+        <div class="row">
+          <div class="col-xl-8 order-xl-1">
+            <div class="card bg-secondary shadow">
+              <div class="card-header bg-white border-0">
+                <div class="row align-items-center">
+                  <div class="col-8">
+                    <h3 class="mb-0">My account</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <form>
+                  <h6 class="heading-small text-muted mb-4">Personal information</h6>
+                  <div class="pl-lg-4">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-name">Name</label>
+                          <level1 class="form-control form-control-alternative"><%= house.name %></level1>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" for="input-email">Email</label>
+                          <level1 class="form-control form-control-alternative"><%= house.email %></level1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label">Phone</label>
+                          <level1 class="form-control form-control-alternative"><%= house.phone %></level1>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                  <!-- Address -->
+                  <h6 class="heading-small text-muted mb-4">Your Interest</h6>
+                  <div class="pl-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="form-group focused">
+                          <label class="form-control-label">House.link</label>
+                          <lebel class="contol1">Request Accepted</lebel>
+                          <button type="button">Payment</button>
+                        </div>
+                      </div>
+                  <hr class="my-4">
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+
+  </body>
+</html>

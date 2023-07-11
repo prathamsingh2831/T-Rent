@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>house</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/housefortenant.css">
+</head>
+
+<body>
+    <form action="/housefortenant" autocomplete="off"class="house details" method="POST" enctype="multipart/form-data" >
+    <section id="banner" style="background-image: url(/backend/images/<%= profiles.picture %>);">
+        <div class="main-text">
+            <h2>
+                <div class="line">
+                    <%= profiles.name %> &nbsp; PRESENTS
+                </div>
+            </h2>
+            <h1><%= profiles.address.substring(0, 24) + "." %></h1>
+            <h3>
+                <span><%= profiles.address.substring(24, 200) + "." %></span><span>Rs. 3,000</span></h3>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-context">
+            <h1 translate="language.website.about">About</h1>
+            <div class="about-text">
+                <p><%= profiles.description %> </p>
+            </div>
+            <div class="detail-context">
+                <h1>Details</h1>
+                <div class="detail-text">
+                    <ul>
+                        <li>
+                            <img src="/img1/details_icon/rent.png" /> Rs. <%= profiles.rent_amount %>
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/bhk.ico" /> <%= profiles.bhk %> BHK
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/area.ico" /> <%= profiles.A_Type %> Area
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/furnish.ico" /> <%= profiles.F_Su %>
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/home.png" /> <%= profiles.T_Fu %> Floor
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/tenant.png" /> <%= profiles.T_Pu %>
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/bath.png" /> <%= profiles.bathrooms %> Bathroom
+                        </li>
+                        <li>
+                            <img src="/img1/details_icon/size.png" /> <%= profiles.size %> Lot size (Sq. ft)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery">
+        <h1 class="head-title picture" translate="language.website.gallery">
+            Gallery
+        </h1>
+        <div class="gallery-context">
+            <figure>
+                <a href="/img1/house.png" itemprop=" contentUrl " data-size="1024x660 ">
+                <img src="/img1/house.png" itemprop="thumbnail " alt="Image description " />
+                </a>
+            </figure>
+            <figure>
+                <a href="/img1/study_room.png" itemprop="contentUrl " data-size="1023x681 ">
+                <img src="/img1/study_room.png" itemprop="thumbnail " alt="Image description " />
+                </a>
+            </figure>
+            <figure>
+                <a href="/img1/bed_room.png" itemprop="contentUrl " data-size="1023x675 ">
+                <img src="/img1/bed_room.png" itemprop="thumbnail " alt="Image description " />
+                </a>
+            </figure>
+            <figure>
+                <a href="/img1/living_room.png" itemprop="contentUrl " data-size="1023x666 ">
+                    <img src="/img1/living_room.png" itemprop="thumbnail " alt="Image description " />
+                </a>
+            </figure>
+            <figure>
+                <a href="/img1/bathroom.png" itemprop="contentUrl " data-size="1024x682 ">
+                    <img src="/img1/bathroom.png" itemprop="thumbnail " alt="Image description " />
+                </a>
+            </figure>
+            <figure>
+                <a href="/img1/kitchen.png" itemprop="contentUrl " data-size="1024x682 ">
+                    <img src="/img1/kitchen.png" itemprop="thumbnail " alt="Image description " />
+                </a>
+            </figure>
+        </div>
+    </section>
+
+    <section id="contact ">
+        <section id="contact">
+            <h1 translate="language.website.contact">Contact</h1>
+            <div class="contact-context">
+                <div class="agent-context">
+                    <div class="agent-images">
+                        <img src="/img1/landlord_dp.jpg" alt="agetn_photo" class="agent-photo">
+                        <img src="/img1/logo.jpg" alt="agetn_logo" class="agent-logo">
+                    </div>
+                    <h1><%= profiles.name %></h1>
+                    <p class="class=" wrapword "">
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> <%= profiles.phone_number %>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> <a class="wrapword" href="mailto:paras@gmail.com"><%= profiles.email %></a>
+                    </p>
+                </div>
+            </div>
+            <!-- <button type="button">Book Now</button></body> -->
+            <div class="buttons">
+                <!-- <a class="btn1 btn btn-light btn-lg" href="/tenantlogin" role="button">Book Now</a> -->
+                <a class="btn1 btn btn-light btn-lg" href="/tenantlogin" role="button">Book Now</a>
+            </div>
+</section>
+</form>
+
+</body>
+
+
+
+</html>

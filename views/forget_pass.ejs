@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in & Sign up Form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/forget_pass.css">
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="inner-box">
+                <div class="forms-wrap">
+                    <form action="/send_otp" autocomplete="off"class="sign-in-form" method="POST">
+                        <div class="logo">
+                            <img src="img/logo.jpg" alt="logo">
+                            <h4>T-rent</h4>
+                        </div>
+                        <div class="heading">
+                            <h3>Forget Password</h3>
+                            <h5>Reset your password via your work phone or email</h5>
+                        </div>
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input 
+                                type="text" 
+                                type="email"
+                                id="email"
+                                minlength="4" 
+                                class="input-field" 
+                                autocomplete="off" 
+                                required
+                                name="email"
+                                />
+                                <label>Email</label>
+                            </div>
+                            <!-- <button-1>
+                                
+                                <button type="button" class="Verify-btn">Send OTP</button>
+                            </button-1> -->
+                            <button type="submit" class="Verify-btn">Send OTP</button>
+                            </div>
+                    </form>
+                    <form action="/verify_otp" autocomplete="off" class="sign-up-form" method="POST">
+                        <div class="logo">
+                            <img src="img/logo.jpg" alt="logo">
+                            <h4>T-rent</h4>
+                        </div>
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input 
+                                type="OTP"
+                                id="otp" 
+                                minlength="4" 
+                                class="input-field" 
+                                autocomplete="off" 
+                                name="otp"
+                                required
+                                />
+                                <label>OTP</label>
+                                
+                            </div>
+                            <!-- <a href="#" class="toggle">Submit</a> -->
+                            <button type="submit" class="toggle">Verify</button>
+                            <p class="text">
+                                Don't have an account?
+                                <a href="#">Sign up</a>
+                            </p>
+                        </div>
+                    </form>
+
+                    <form action="/update_password" autocomplete="off"class="sign-up-form">
+                        <div class="logo">
+                            <img src="img/logo.jpg" alt="logo">
+                            <h4>T-rent</h4>
+                        </div>
+                        <div class="actual-form">
+                            <div class="input-wrap">
+                                <input 
+                                type="password"
+                                class="input-field" 
+                                autocomplete="off"
+                                name="new_password" 
+                                required
+                                />
+                                <label>New Password</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input 
+                                type="password"
+                                class="input-field" 
+                                autocomplete="off" 
+                                name="confirm_password"
+                                required
+                                />
+                                <label>Confirm New Password</label>
+                            </div>
+                            <input type="submit" value="Submit" class="submit-btn"/>
+                            
+                        </div>
+                    </form>
+                </div>
+                <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="./img/image1.png" class="image img-1 show" alt=""/>
+                        <img src="./img/image2.png" class="image img-2" alt=""/>
+                        <img src="./img/image3.png" class="image img-3" alt=""/>
+                    </div>
+
+                    <div class="text-slider">
+                        <div class="text-wrap">
+                            <div class="text-group">
+                                <h2>Submit Your Personal Details</h2>
+                                <h2>Register Your House</h2>
+                                <h2>Get Tenent</h2>
+                            </div>
+                        </div>
+
+                        <div class="bullets">
+                            <span class="active" data-value="1"></span>
+                            <span data-value="2"></span>
+                            <span data-value="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/forget_pass.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@sendgrid/mail@7.4.4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mongoose/5.12.7/mongoose.min.js"></script>
+    <script>
+      // Connect to MongoDB using Mongoose
+    //   mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true, useUnifiedTopology: true });
+    //   const db = mongoose.connection;
+
+    //   db.once('open', () => {
+    //     console.log('Database connected successfully!');
+    //   });
+
+      // Define the Mongoose schema for storing email/mobile number data
+      const emailSchema = new mongoose.Schema({
+        email: String
+      });
+
+      const Email = mongoose.model('Email', emailSchema);
+
+      function generateOTP() {
+        // Define the length of the OTP
+        const OTP_LENGTH = 6;
+
+        // Define the possible characters that can be used in the OTP
+        const OTP_CHARS = "0123456789";
+
+        let otp = "";
+
+        // Generate a random OTP by selecting random characters from the possible characters
+        for (let i = 0; i < OTP_LENGTH; i++) {
+          otp += OTP_CHARS.charAt(Math.floor(Math.random() * OTP_CHARS.length));
+        }
+
+        // Return the generated OTP
+        return otp;
+        console.log(otp);
+      }
+
+      function sendOTP() {
+        const emailOrMobileNo = document.getElementById("email").value;
+
+        // Check if the email/mobile number is present in the database
+        Email.findOne({ email: emailOrMobileNo }, function (err, email) {
+          if (err) {
+            console.log(err);
+            return;
+          }
+
+          if (!email) {
+            alert("Email/mobile number not found in database. Please enter a valid email/mobile number.");
+            return;
+          }
+
+          // Send the OTP to the user's email/mobile number using the Mailchimp API
+          const sgMail = require('@sendgrid/mail');
+          sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+          const msg = {
+            to: emailOrMobileNo,
+            from: 'noreply@example.com',
+            subject: 'Your OTP for verification',
+            text: `Your OTP is ${otp}`,
+          };
+          sgMail.send(msg);
+
+          // Store the generated OTP in local storage
+          localStorage.setItem("otp", otp);
+
+          alert(`OTP sent to ${emailOrMobileNo}`);
+        });
+      }
+
+      function verifyOTP() {
+        const enteredOTP = document.getElementById("otp").value;
+        const generatedOTP = localStorage.getItem("otp");
+
+        if (enteredOTP === generatedOTP) {
+          alert("OTP verification successful!");
+        } else {
+          alert("OTP verification failed. Please try again.");
+        }
+      }
+    </script> -->
+</body>
+</html>
